@@ -1,8 +1,11 @@
-import styled, {ThemeProvider} from 'styled-components';
+import styled from 'styled-components';
+import {space, color} from 'styled-system';
 
-const Box = styled.div`
-  padding: 8px;
-  background-color: green;
+const Comp = styled.div`
+  ${space}
+  ${color}
 `;
+
+const Box = (props) => <Comp p={2} bg='green' {...props} />
 
 export default () => <Box>This causes no error!</Box>
